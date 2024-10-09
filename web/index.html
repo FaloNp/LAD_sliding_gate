@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- AWP_In_Variable Name ='"web_page".przycisk' -->
+<!-- AWP_In_Variable Name ='"web_page".zmienna_stanu' -->
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel sterowania</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Sterowanie brama przesuwna</h1>
+    </div>
+    <div id="content">
+        <div id="panel">
+            <div id="failure_info_box">
+                <div class="panel_title">AWARIA</div>
+                <div class="failure_info_box_text">
+                    Wykryto awarie sprzetu prosze skontaktować się z serwisem
+                </div>
+            </div>
+            <div class="panel_title">Panel sterowania brama przesuwna:</div>
+            <div class="panel_content">
+                <div class="panel_content_left">
+                    <div class="panel_content_left_info_box">
+                        <ul>
+                            <li>0 = brama otwarta</li>
+                            <li>1 = zamykanie bramy</li>
+                            <li>2 = brama zamknięta</li>
+                            <li>3 = otwieranie bramy</li>
+                            <li>4 = stop</li>
+                            <li>5 = AWARIA</li>
+                        </ul>
+                    </div>
+                    <div class="panel_content_left_infoBar">
+                        <div>Stan bramy:</div>
+                        <div id="parameter_from_tia">:="web_page".zmienna_stanu:</div>
+                        <div class="state_field"></div>
+                    </div>
+                </div>
+                <div class="panel_content_right">
+                    <div>
+                        PRZYCISK STEROWANIA BRAMY
+                    </div>
+                    <div class="power_button">
+                        <div class="light"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel_footer">
+                <div class="loadingBar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="footer">
+        <p>&copy; 2024 Moja Strona Internetowa</p>
+    </div>
+
+</body>
+
+</html>

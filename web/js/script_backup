@@ -1,0 +1,38 @@
+/* HTML CODE:
+<div class="panel_footer">
+                <div class="panel_footer_left">
+                    <div class="loadingBar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+                <div class="panel_footer_right" style="display: none;">
+                    CZUJNIKI
+                    <div class="panel_content-right_sensor_bar">
+                        <input type="radio" id="1">
+                        <input type="radio" id="2">
+                        <input type="radio" id="3">
+                        <input type="radio" id="4">
+                    </div>
+                </div>
+            </div>
+JS CODE:
+    stop_button.addEventListener('click', function() {
+        console.log("WYKRYTO CLIck");
+        if(STOP_MEM==0){
+            PROCESS_BUFF = PROCESS;
+            change_value(plcVariable[1], 4);
+            console.log(plcVariable[1]+" "+4);
+            console.log("ZATRZYMANO");
+            STOP_MEM = 1;
+        }
+        else{
+            PROCESS = PROCESS_BUFF;
+            change_value(plcVariable[1], PROCESS);
+            console.log(plcVariable[1]+" "+ PROCESS);
+            console.log("WZNOWIONO");
+            STOP_MEM = 0;
+        }
+        
+    });
+*/
+
